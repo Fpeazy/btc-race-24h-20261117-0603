@@ -121,11 +121,14 @@
 //   validated net edge were <= 0, the bot would not trade at all.
 //
 // Validation (dev window, exact harness fill model, local backtest —
-// numbers are the local Sim; official grade-local numbers are recorded in
-// the commit message after grading, as in Round 2):
-//   Full window net PnL +$21.78 (local Sim; 2x-fee +$16.91), 4 round trips,
+// numbers are the OFFICIAL grade-local on this commit, run twice,
+// byte-identical; the local Sim agrees to the cent):
+//   Full window net PnL +$21.78 (official grade-local; fees at 2x: +$18.54
+//   official, +$16.91 local Sim estimate), 4 round trips,
 //   win rate 100% (4/4: +1.83 / +11.51 / +3.06 / +5.39), max drawdown
-//   0.73%. Walk-forward folds (4 x 360 bars): +1.83 / +14.56 / 0.00 (no
+//   0.73%, 11 fills (4 buys + 7 sells: 3 take-profit legs + 4 full exits),
+//   action-log sha cd0dacfa…, L1 regrade reproduced byte for byte.
+//   Walk-forward folds (4 x 360 bars): +1.83 / +14.56 / 0.00 (no
 //   setup fired — flat in a flat block) / +5.33 — 3 of 4 positive.
 //   Out-of-sample on live CEX BTC 1-min data: Kraken 12h +0.00 (flat),
 //   Coinbase 6h flat +0.00 (flat), Coinbase 5h down +0.00 (flat — the
