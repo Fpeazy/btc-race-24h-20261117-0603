@@ -61,7 +61,8 @@
 //   would not trade at all.
 //
 // Validation (dev window, exact harness fill model, local backtest):
-//   Full window net PnL +$20.33 (fees at 2x: +$15.46), 4 round trips,
+//   Full window net PnL +$20.33 (official grade-local; fees at 2x: +$17.09
+//   official, +$15.46 local Sim estimate), 4 round trips,
 //   win rate 100% (4/4: +1.83 / +13.83 / +0.06 / +4.60), max drawdown
 //   0.85%. Walk-forward folds (4 x 360 bars): +1.83 / +7.94 / 0.00 (no
 //   setup fired — flat in a flat block) / +4.57 — 3 of 4 positive.
