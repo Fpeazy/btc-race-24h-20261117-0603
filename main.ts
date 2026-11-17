@@ -45,11 +45,13 @@
 //     DeepSeek 429'd on its one retry. No model produced a structural idea
 //     the measurements had not already covered or refuted.
 //
-// ROUND 4 RESULT (local backtest; official grade-local numbers to be
-// recorded in the docs commit after grading):
-//   Full window net PnL +$26.35 (vs R3 +$21.78, +21%), 5 round trips,
+// ROUND 4 RESULT (numbers are the OFFICIAL grade-local on this commit,
+// run twice, byte-identical; the local Sim agrees to the cent on net PnL):
+//   Full window net PnL +$26.352428 (vs R3 +$21.78, +21%), 5 round trips,
 //   win rate 100% (5/5: +1.83 / +11.51 / +3.06 / +4.55 / +5.40), max DD
-//   0.73%, 2x-fee PnL +$20.24 (fees $6.11 for 5 trades), 13 fills.
+//   0.727%, 2x-fee PnL +$22.289237 official (fees $4.051359; the local Sim
+//   estimate was +$20.24), 14 fills (5 buys + 9 sells), action-log sha
+//   fe6f1cd8…, L1 regrade reproduced byte for byte.
 //   Walk-forward folds (4 x 360 bars): +1.83 / +14.56 / +4.51 / +5.33 —
 //   4 of 4 positive (R3 was 3/4; fold 2 was $0.00, now its first trade).
 //   Out-of-sample on live CEX BTC 1-min: Kraken 12h +$6.24 (1 trade, bar
